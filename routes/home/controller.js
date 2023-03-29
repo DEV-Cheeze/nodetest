@@ -4,9 +4,7 @@ const home =  (req, res) => {
 }
 
 const login = (req, res) => {
-    console.log("gd");
     res.render("home/login");
-    
 }
 
 module.exports = {

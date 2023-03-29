@@ -13,6 +13,7 @@ server.set("view engine", "ejs"); //어떤 파일 형식으로 해석할 것인�
 
 server.use(express.urlencoded({extended: true})); // use - 미들웨어를 등록해줌
 server.use("/", home); //home에 있는 index.js파일 안에 get("/")으로 된 함수가 콜백되어 실행됨.
+server.use(express.static(`${__dirname}/scripts`)) // 정적 파일에 대한 기본 경로 제공
 
 con.connect(); //db 서버에 연결
 //get(path, callback)...
